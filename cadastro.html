@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>CADASTRO</h1>
+            <div class="form">
+                <div class="form-input">
+                    <label for="nome">Nome</label>
+                    <div class="circulo"></div>
+                    <img src="imagens/user-solid.svg" alt="">
+                    <input type="text" class="nome" id="nome" placeholder="Ex.: Rômulo Ferreira Santos">
+                </div>
+                <div class="form-input">
+                    <label for="cpf">CPF</label>
+                    <div class="circulo"></div>
+                    <img src="imagens/address-card-solid.svg" alt="">
+                    <input type="text" class="cpf" id="cpf" pattern="\d{3}(\.?\d{3}){2}-?\d{2}|^\d{11}$" placeholder="Ex.: 000.000.000-00">
+                </div>
+                <div class="form-input">
+                    <label for="data-nasc">Data de nascimento</label>
+                    <div class="circulo"></div>
+                    <img src="imagens/calendar-days-solid.svg" alt="">
+                    <input type="text" class="data-nasc" id="data" placeholder="Ex.: 01/01/1999">
+                </div>
+                <div class="form-input">
+                    <label for="email">E-mail</label>
+                    <div class="circulo"></div>
+                    <img src="imagens/envelope-solid.svg" alt="">
+                    <input type="email" class="email" id="email" placeholder="Ex.: senac321@petrolina.pe.senac.br">
+                </div>
+                <div class="form-input">
+                    <label for="senha">Senha</label>
+                    <div class="circulo"></div>
+                    <img src="imagens/lock-solid (1).svg" alt="">
+                    <input type="password" class="senha" id="senha" placeholder="Ex.: senac123">
+                </div>
+                <button class="botao-cadastro">CRIAR CONTA</button>
+                <p>Já possui conta? <a href="https://www.youtube.com/">Log-in</a></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

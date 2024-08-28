@@ -1,0 +1,214 @@
+/* Reset básico para margem e fonte */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo da barra lateral */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 180px; /* Ajuste a largura conforme necessário */
+    background-color: #f5f5f5; /* Cor de fundo da barra lateral */
+    border-left: 30px solid orange; /* Borda laranja à direita */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px; /* Espaço no topo */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra opcional para destacar a barra lateral */
+    z-index: 1; /* Garante que a barra lateral fique atrás do conteúdo principal */
+}
+
+.upbar {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    left: 0;
+    height: 12%;
+    width: 100%; /* Ajuste a largura conforme necessário */
+    background-color: #003282; /* Cor de fundo da barra lateral */
+    display: flex;
+    padding-top: none; /* Espaço no topo */
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+    z-index: 1; /* Garante que a barra lateral fique atrás do conteúdo principal */
+}
+.downbar {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    top: 93%;
+    left: 0;
+    height: 12%;
+    width: 100%; /* Ajuste a largura conforme necessário */
+    background-color: #003282; /* Cor de fundo da barra lateral */
+    display: flex;
+    padding-top: none; /* Espaço no topo */
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+    z-index: 1; /* Garante que a barra lateral fique atrás do conteúdo principal */
+}
+.quadrado {
+    height: 300px;
+    width: 1890px;
+    background: linear-gradient(to right, rgba(0, 50, 130, 0.7), rgba(0, 119, 255, 0.7)), url('Design sem nome.png') no-repeat center center; /* Gradiente azul com imagem */
+    background-size: cover; /* Faz a imagem cobrir todo o elemento */
+    margin-top: 10.5%;
+    margin-left: 15%;
+    display: flex;
+    border-radius: 15px;
+}
+.logo-senac {
+    height: 220px; /* Ajuste a altura do logo conforme necessário */
+    width: 220px; /* Mantém a proporção do logo */
+    position: absolute;
+    top: 32%; /* Centraliza verticalmente */
+    left: 23%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta a posição para que o centro do logo esteja no centro do quadrado */
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.3s ease-in-out; /* Transição suave para o efeito de hover */
+    z-index: 1; /* Garante que o logo apareça sobre o gradiente */
+}
+.quadrado:hover .logo-senac {
+    opacity: 1; /* Torna o logo visível ao passar o mouse */
+}
+.img-impressao{
+    height: 100%;
+    width: 100%;
+   border-radius: 15px;
+}
+
+.quadrado-p {
+    
+    background-image: url("Impressao-3D-como-usar-tecnologia-e-inovacao-a-favor-do-seu-negocio.png");
+    background-size: cover;
+
+    height: 430px;
+    width: 870px;
+    background-color: red;
+    margin-top: 3%;
+    margin-left: 15%;
+    display: flex;
+    border-radius: 15px;
+}
+.quadrado-L{
+    height: 430px;
+    width: 870px;
+    background-color: #fbbb81;
+    margin-top: -18.4%;
+    margin-left: 55%;
+    display: flex;
+    border-radius: 15px;
+}
+.adc-atalho{
+    display: flex;
+    font-family: inherit;
+    font-size: 17px;
+    text-decoration: underline;
+    color: white;
+    margin-left: 77%;
+    margin-top: 390px;
+}
+.adc-impressora{
+    display: flex;
+    font-family: inherit;
+    font-size: 17px;
+    text-decoration: underline;
+    color: white;
+    margin-left: 77%;
+    margin-top: 390px;
+}
+.img-impressora{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+
+.img-senac{
+    display: flex;
+    flex-direction: column;
+    margin-left: 14.4%;
+    margin-top: 1.5%;
+    width: 110px;
+    height: 60px;
+}
+
+/* Estilo dos links na barra lateral */
+.sidebar a {
+    display: block;
+    margin: 47px 0; /* Espaço vertical entre os ícones */
+    color: #003282; /* Cor do ícone */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 67px; /* Tamanho dos ícones */
+    text-align: center; /* Alinha o texto ao centro */
+    transition: color 0.3s; /* Transição suave para a cor ao passar o mouse */
+}
+
+.sidebar a span {
+    display: block;
+    margin-top: 8px; /* Espaço entre o ícone e o texto */
+    font-size: 14px; /* Tamanho do texto */
+    color: #003282; /* Cor do texto */
+}
+
+/* Estilo dos ícones ao passar o mouse */
+.sidebar a:hover {
+    color: orange; /* Cor do ícone ao passar o mouse */
+}
+
+.sidebar a:hover span {
+    color: orange; /* Cor do texto ao passar o mouse */
+}
+
+/* Divisórias entre os ícones */
+.sidebar hr {
+    width: 100%;
+    border: 0;
+    border-top: 1px solid #ddd; /* Cor e espessura da divisória */
+    margin: 20px 0; /* Espaço vertical ao redor da divisória */
+}
+.btn-icon {
+    position: absolute;
+    bottom: 10px; /* Ajuste a distância do fundo conforme necessário */
+    right: 10px; /* Ajuste a distância da borda direita conforme necessário */
+    background-color: orange; /* Cor de fundo do botão */
+    border: none;
+    border-radius: 50%; /* Botão redondo */
+    width: 50px; /* Largura do botão */
+    height: 50px; /* Altura do botão */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para o botão */
+    cursor: pointer; /* Mãozinha ao passar o mouse */
+    color: white; /* Cor do ícone */
+    font-size: 24px; /* Tamanho do ícone */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave para cor */
+}
+.btn-icon:hover {
+    background-color: #ff6600; /* Cor do botão ao passar o mouse */
+    color: #fff; /* Cor do ícone ao passar o mouse */
+}
+.quadrado-p {
+    position: relative; /* Necessário para posicionar o botão dentro do quadrado-p */
+}
+.quadrado-L {
+    height: 436px;
+    width: 950px;
+    background-color: #fbbb81;
+    margin-top: -18.4%;
+    margin-left: 55%;
+    display: flex;
+    border-radius: 15px;
+    position: relative; /* Necessário para posicionar o botão dentro do quadrado-L */
+}
+
+/* Estilo do conteúdo principal */
+main {
+    margin-left: 200px; /* Ajusta a margem esquerda para evitar sobreposição com a barra lateral */
+    padding: 20px; /* Espaçamento interno do conteúdo principal */
+}
+
+

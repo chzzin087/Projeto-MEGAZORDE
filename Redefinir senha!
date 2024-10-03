@@ -190,11 +190,6 @@ body {
     .senac-logo img {
         width: 200px; /* Reduz a largura da imagem do logo */
     }
-    .texts {
-        margin-bottom: 50%;
-        height: ;
-
-    }
     .reset-password-section{
         height: 30%;
         width: 80%;

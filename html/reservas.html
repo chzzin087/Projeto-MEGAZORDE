@@ -1,52 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservas</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../css/reservas.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="agendamento.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    <header class = "upbar"> 
-        <img class = "img-senac" src="../img/senac_logo_branco.png" alt = "">
+    <div class="upbar">
+        <img class="img-senac" src="imagens/senac_logo_branco.png" alt="">
     </div>
-    <div class = "downbar">
+    <div class="downbar">
     </div>
-    <sidebar class="sidebar">
-        <img src="../img/bars-solid.svg" alt="" class="menu_sand">
+    <div class="sidebar">
+        <i class="fa-solid fa-bars"></i>
         <nav class="side_items">
-            <a href="inicio.html">
+            <a href="#">
                 <i class="fa-solid fa-house"></i>
                 <span>Início</span>
             </a>
             <hr>
-            <a href="gerenciamento.html">
+            <a href="#">
                 <i class="fa-solid fa-calendar-days"></i>
                 <span>Gerenciamento</span>
             </a>
             <hr>
-            <a href="reservas.html">
+            <a href="#">
                 <i class="fa-solid fa-table-list"></i>
                 <span>Reservas</span>
             </a>
             <hr>
-            <a href="relatorio.html">
+            <a href="#">
                 <i class="fa-solid fa-clipboard"></i>
                 <span>Relatório</span>
             </a>
             <hr>
-            <a href="perfil.html">
+            <a href="#">
                 <i class="fa-solid fa-circle-user"></i>
                 <span>Perfil</span>
             </a>
         </nav>
-    </sidebar>
+    </div>
     <main>
         <div class="pesquisa">
-            <img src="imagens/magnifying-glass-solid.svg" alt="" class="img-pesq">
+            <i class="fa-solid fa-magnifying-glass"></i>
             <input type="text" name="pesquisa" id="pesquisa" placeholder="Pesquisar por evento" class="campo-pesq">
-            <button class="botao-reserva"><img src="imagens/plus-solid.svg" alt="">Nova reserva</button>
+            <button class="botao-reserva"><i class="fa-solid fa-plus"></i>Nova reserva</button>
         </div>
         <div class="container">
             <div class="calendario">
@@ -87,38 +91,38 @@
                 </div>
             </div>
         </div>
-            <div class="horarios">
-                <p>Horários disponíveis: 09/09/2024</p>
-                <div class="selec-hora">
-                    <div class="botao-hora">08:00</div>
-                    <div class="botao-hora">08:30</div>
-                    <div class="botao-hora">09:00</div>
-                    <div class="botao-hora">09:30</div>
-                    <div class="botao-hora">10:00</div>
-                    <div class="botao-hora">10:30</div>
-                    <div class="botao-hora">11:00</div>
-                    <div class="botao-hora">11:30</div>
-                    <div class="botao-hora">12:00</div>
-                    <div class="botao-hora">12:30</div>
-                    <div class="botao-hora">13:00</div>
-                    <div class="botao-hora">13:30</div>
-                    <div class="botao-hora ocupado">14:00</div>
-                    <div class="botao-hora ocupado">14:30</div>
-                    <div class="botao-hora ocupado">15:00</div>
-                    <div class="botao-hora ocupado">15:30</div>
-                    <div class="botao-hora">16:00</div>
-                    <div class="botao-hora">16:30</div>
-                    <div class="botao-hora ocupado">17:00</div>
-                    <div class="botao-hora ocupado">17:30</div>
-                    <div class="botao-hora">18:00</div>
-                    <div class="botao-hora">18:30</div>
-                    <div class="botao-hora">19:00</div>
-                    <div class="botao-hora">19:30</div>
-                    <div class="botao-hora ocupado">20:00</div>
-                    <div class="botao-hora ocupado">20:30</div>
-                    <div class="botao-hora ocupado">21:00</div>
-                </div>
+        <div class="horarios">
+            <p>Horários disponíveis: 09/09/2024</p>
+            <div class="selec-hora">
+                <div class="botao-hora">08:00</div>
+                <div class="botao-hora">08:30</div>
+                <div class="botao-hora">09:00</div>
+                <div class="botao-hora">09:30</div>
+                <div class="botao-hora">10:00</div>
+                <div class="botao-hora">10:30</div>
+                <div class="botao-hora">11:00</div>
+                <div class="botao-hora">11:30</div>
+                <div class="botao-hora">12:00</div>
+                <div class="botao-hora">12:30</div>
+                <div class="botao-hora">13:00</div>
+                <div class="botao-hora">13:30</div>
+                <div class="botao-hora ocupado">14:00</div>
+                <div class="botao-hora ocupado">14:30</div>
+                <div class="botao-hora ocupado">15:00</div>
+                <div class="botao-hora ocupado">15:30</div>
+                <div class="botao-hora">16:00</div>
+                <div class="botao-hora">16:30</div>
+                <div class="botao-hora ocupado">17:00</div>
+                <div class="botao-hora ocupado">17:30</div>
+                <div class="botao-hora">18:00</div>
+                <div class="botao-hora">18:30</div>
+                <div class="botao-hora">19:00</div>
+                <div class="botao-hora">19:30</div>
+                <div class="botao-hora ocupado">20:00</div>
+                <div class="botao-hora ocupado">20:30</div>
+                <div class="botao-hora ocupado">21:00</div>
             </div>
+        </div>
         <dialog class="add-reserva">
             <div class="add-event-header">
                 <div class="title">Nova reserva</div>
@@ -127,15 +131,20 @@
             <form class="form-dados-reserva">
                 <div class="add-event-body">
                     <div class="add-event-input">
-                        <label for="nome-evento" class="label-input">Nome do evento <i class="fa-solid fa-asterisk"></i></label>
-                        <input type="text" placeholder="Ex.: Atividade com arduinos" class="event-name" id="nome-evento">
+                        <label for="nome-evento" class="label-input">Nome do evento <i
+                                class="fa-solid fa-asterisk"></i></label>
+                        <input type="text" placeholder="Ex.: Atividade com arduinos" class="event-name"
+                            id="nome-evento">
                     </div>
                     <div class="add-event-input">
-                        <label for="responsavel-evento" class="label-input">Responsável <i class="fa-solid fa-asterisk"></i></label>
-                        <input type="text" placeholder="Ex.: Sebastião Gomes" class="event-owner" id="responsavel-evento">
+                        <label for="responsavel-evento" class="label-input">Responsável <i
+                                class="fa-solid fa-asterisk"></i></label>
+                        <input type="text" placeholder="Ex.: Sebastião Gomes" class="event-owner"
+                            id="responsavel-evento">
                     </div>
                     <div class="add-event-input">
-                        <label for="data-evento" class="label-input">Data do evento <i class="fa-solid fa-asterisk"></i></label>
+                        <label for="data-evento" class="label-input">Data do evento <i
+                                class="fa-solid fa-asterisk"></i></label>
                         <input type="text" placeholder="Ex.: 01/01/2025" class="event-date" id="data-evento">
                     </div>
                     <div class="add-event-input">
@@ -147,7 +156,8 @@
                         <input type="text" placeholder="Ex.: Sala 07" class="event-place" id="local-evento">
                     </div>
                     <div class="add-event-input">
-                        <label for="status-evento" class="label-input">Status <i class="fa-solid fa-asterisk"></i></label>
+                        <label for="status-evento" class="label-input">Status <i
+                                class="fa-solid fa-asterisk"></i></label>
                         <select class="event-status" id="status-evento">
                             <option disabled selected>Selecione:</option>
                             <option value="1">Em andamento</option>
@@ -156,8 +166,9 @@
                         </select>
                     </div>
                     <div class="add-event-input">
-                        <label for="hora-inicio-evento" class="label-input">De: <i class="fa-solid fa-asterisk"></i></label>
-                        <select class="event-time-from" id="hora-inicio-evento">    
+                        <label for="hora-inicio-evento" class="label-input">De: <i
+                                class="fa-solid fa-asterisk"></i></label>
+                        <select class="event-time-from" id="hora-inicio-evento">
                             <option value="1">08:00</option>
                             <option value="1">08:30</option>
                             <option value="1">09:00</option>
@@ -187,7 +198,8 @@
                         </select>
                     </div>
                     <div class="add-event-input">
-                        <label for="hora-fim-evento" class="label-input">Até: <i class="fa-solid fa-asterisk"></i></label>
+                        <label for="hora-fim-evento" class="label-input">Até: <i
+                                class="fa-solid fa-asterisk"></i></label>
                         <select class="event-time-to" id="hora-fim-evento">
                             <option value="1">08:30</option>
                             <option value="1">09:00</option>
@@ -222,9 +234,13 @@
             </form>
         </dialog>
     </main>
-    
+
     <!-- Link para a biblioteca de ícones FontAwesome -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" integrity="sha384-OH5h9J1d4F2pWOSr6QdoARnIk/lZwE2deLq5pD7zB2RyFF2zDzZQdyycfp6Hs6jb" crossorigin="anonymous"></script>
-    <script src="../js/reservas.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"
+        integrity="sha384-OH5h9J1d4F2pWOSr6QdoARnIk/lZwE2deLq5pD7zB2RyFF2zDzZQdyycfp6Hs6jb"
+        crossorigin="anonymous"></script>
+    <script src="agendamento.js"></script>
 </body>
+
 </html>
+

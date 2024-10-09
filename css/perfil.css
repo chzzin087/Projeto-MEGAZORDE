@@ -419,12 +419,15 @@ main {
 .ocupacao-info-home{
     font-weight: 350;
     font-family: "Lexend";
+    margin-top: 2%;
+    color: #3572EF;
 }
 
 .perfil{
     font-family: "Lexend";
     font-weight: 350;
     color: #9A9A9A;
+    margin-top: 2%;
 }
 .user-info-container{
     width: 100%;

@@ -218,6 +218,7 @@ main {
     .side_items{
         flex-direction: column;
         display: none;
+        z-index: 2;
     }
     .menu_sand{
         display: initial;

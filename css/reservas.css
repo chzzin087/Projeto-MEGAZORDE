@@ -152,7 +152,27 @@ main {
     font-family: 'Lexend';
 
 }
-
+.caminho{
+    display: flex;
+    margin-top: 8%;
+}
+.caminho a{
+    font-family: 'Lexend';
+}
+.caminho .home{
+    color: #3572ef;
+    text-decoration: none;
+}
+.caminho .reservas{
+    color: #9a9a9a;
+    text-decoration: none;
+}
+.caminho .home:hover{
+    text-decoration: underline;
+}
+.caminho .reservas:hover{
+    text-decoration: underline;
+}
 .menu_sand {
     display: none;
 }

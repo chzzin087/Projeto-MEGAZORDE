@@ -117,6 +117,7 @@ main {
 @media screen and (max-width: 800px){
     body{
         line-height: 1.2em;
+        overflow: hidden;
     }
     .side_items{
         flex-direction: column;
@@ -148,12 +149,14 @@ main {
     }
     .ocupacao-info-titulo{
         display: flex;
-        font-size: 140;
+        font-size: 20px;
+        width: 100%;
     }
     .navegacao{
         display: flex;
-        margin-left: 98%;
-        margin-top: 5%;
+        margin-left: 60%;
+        margin-top: 22%;
+        width: 100%;
     }
     .user-info{
         position: absolute;
@@ -169,20 +172,18 @@ main {
     .profile-pic-moon, material-symbols-outlined{
         display: none;
     } 
-    .navegacao{
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        margin-bottom: 3%;
-    }
     .dados-usuario{
         display: flex;
-        font-size: 60%;
+        width: 50vw;
+        font-size: 11px;
         margin-top: 110%;
         margin-left: -65%;
-        line-height: 0.5cm;
-        font-weight: 900;
-
+        line-height: 0.6cm;
+        font-weight: 700;
+    }
+    .dados-usuario h2{
+        font-size: 15px;
+        width: 50vw;
     }
     .dados-usuario .a {
         color: blue;
@@ -217,7 +218,6 @@ main {
         flex-direction:column;
         text-align:center;
         width: 100%;
-        
     }
     .quadrado{
         height: 1vh;
@@ -226,8 +226,8 @@ main {
     }
     .mobile{
         display: initial !important;
-        margin-top: 25%;
-        margin-left: 70%;
+        margin-top: 38%;
+        margin-left: 60%;
     }
     .sair{
         display: none;
@@ -243,9 +243,6 @@ main {
     }
     .user-details .ab .fa-arrow-right-from-bracket{
         padding: 50%;
-    }
-    .navegacao .h1{
-        margin-top: -15%;
     }
     .initials{
         font-size: 60%;
@@ -453,3 +450,4 @@ main {
     margin-left: 25%;
     margin-top: 25%;
 }
+

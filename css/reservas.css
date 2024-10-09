@@ -9,7 +9,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Inter";
+    font-family: "Lexend";
 }
 
 body {
@@ -154,10 +154,10 @@ main {
 }
 .caminho{
     display: flex;
-    margin-top: 8%;
+    margin-top: 11.6vh;
 }
 .caminho a{
-    font-family: 'Lexend';
+    font-size: 12px;
 }
 .caminho .home{
     color: #3572ef;
@@ -726,6 +726,10 @@ main {
 
     main {
         margin: 0;
+    }
+
+    .caminho {
+        display: none;
     }
 
     .sidebar {

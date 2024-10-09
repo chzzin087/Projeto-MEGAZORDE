@@ -322,7 +322,6 @@ function addListener() {
             //chamar activeday depois de clicar
             getActiveDay(e.target.innerHTML);
             updateEvents(Number(e.target.innerHTML));
-            verificaHorario();
 
             //remover ativo do dia antes ativo
 
@@ -423,44 +422,4 @@ function updateEvents(date) {
     }
 
     eventsContainer.innerHTML = events;
-}
-
-function verificaHorario() {
-    // Limpar classes "ocupado" antes de verificar novamente
-    const horarios = document.querySelectorAll('.botao-hora');
-    horarios.forEach(horario => {
-        horario.classList.remove('ocupado');
-    });
-
-    // Obter eventos do dia ativo
-    const eventosDoDiaAtivo = eventsArr.find(event => 
-        event.day === activeDay && event.month === month + 1 && event.year === year
-    );
-
-    if (eventosDoDiaAtivo) {
-        // Iterar sobre os eventos e marcar os horários ocupados
-        eventosDoDiaAtivo.events.forEach(event => {
-            const horaInicio = event.horaIni;
-            const horaFim = event.horaFim;
-
-            // Converter horários em minutos para facilitar a comparação
-            const [horaIniH, horaIniM] = horaInicio.split(':').map(Number);
-            const [horaFimH, horaFimM] = horaFim.split(':').map(Number);
-
-            const inicioEmMinutos = horaIniH * 60 + horaIniM;
-            const fimEmMinutos = horaFimH * 60 + horaFimM;
-
-            // Verificar cada horário disponível
-            horarios.forEach(horario => {
-                const horarioTexto = horario.textContent;
-                const [horarioH, horarioM] = horarioTexto.split(':').map(Number);
-                const horarioEmMinutos = horarioH * 60 + horarioM;
-
-                // Se o horário estiver dentro do intervalo, adicionar a classe "ocupado"
-                if (horarioEmMinutos >= inicioEmMinutos && horarioEmMinutos < fimEmMinutos) {
-                    horario.classList.add('ocupado');
-                }
-            });
-        });
-    }
 }

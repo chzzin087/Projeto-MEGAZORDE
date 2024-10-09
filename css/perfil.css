@@ -281,7 +281,6 @@ main {
 .dados-usuario{
     width: 30%;
     height: 60vh;
-    font-family: "Lexend";
     display: flex;
     flex-direction: column;
    
@@ -357,14 +356,11 @@ main {
 
 .user-details {
     text-align: center;
-    font-family: "lexend";
 }
 .user-details h1{
-    font-family: "lexend";
     font-weight: 300;
 }
 .user-details h3{
-    font-family: "lexend";
     font-weight:300;
     color: #9A9A9A;
 }
@@ -380,7 +376,6 @@ main {
 }
 .user-details h4{
     position: fixed;
-    font-family: "Lexend";
     color: #050C9C;
     margin-left: 16%;
     margin-top: 6%;
@@ -418,16 +413,23 @@ main {
 }
 .ocupacao-info-home{
     font-weight: 350;
-    font-family: "Lexend";
     margin-top: 2%;
     color: #3572EF;
+    font-size: 12px;
+    text-decoration: none;
+    margin-left: 5%;
+}
+
+.ocupacao-info-home:hover, .perfil:hover{
+    text-decoration: underline;
 }
 
 .perfil{
-    font-family: "Lexend";
     font-weight: 350;
     color: #9A9A9A;
     margin-top: 2%;
+    font-size: 12px;
+    text-decoration: none;
 }
 .user-info-container{
     width: 100%;
@@ -441,7 +443,6 @@ main {
     margin-top: 2vw;
     font-weight: 450;
     width: 100%;
-    font-family: "Lexend";
     text-decoration: underline;
     margin-left: 2%;
 }
@@ -453,4 +454,3 @@ main {
     margin-left: 25%;
     margin-top: 25%;
 }
-

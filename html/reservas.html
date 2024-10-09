@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="agendamento.css">
+    <title>Reservas</title>
+    <link rel="stylesheet" href="../css/reservas.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -13,34 +13,34 @@
 
 <body>
     <div class="upbar">
-        <img class="img-senac" src="imagens/senac_logo_branco.png" alt="">
+        <img class="img-senac" src="../img/senac_logo_branco.png" alt="">
     </div>
     <div class="downbar">
     </div>
     <div class="sidebar">
         <i class="fa-solid fa-bars"></i>
         <nav class="side_items">
-            <a href="#">
+            <a href="inicio.html">
                 <i class="fa-solid fa-house"></i>
                 <span>Início</span>
             </a>
             <hr>
-            <a href="#">
+            <a href="gerenciamento.html">
                 <i class="fa-solid fa-calendar-days"></i>
                 <span>Gerenciamento</span>
             </a>
             <hr>
-            <a href="#">
+            <a href="reservas.html">
                 <i class="fa-solid fa-table-list"></i>
                 <span>Reservas</span>
             </a>
             <hr>
-            <a href="#">
+            <a href="relatorio.html">
                 <i class="fa-solid fa-clipboard"></i>
                 <span>Relatório</span>
             </a>
             <hr>
-            <a href="#">
+            <a href="perfil.html">
                 <i class="fa-solid fa-circle-user"></i>
                 <span>Perfil</span>
             </a>
@@ -110,21 +110,21 @@
                 <div class="botao-hora">12:30</div>
                 <div class="botao-hora">13:00</div>
                 <div class="botao-hora">13:30</div>
-                <div class="botao-hora">14:00</div>
-                <div class="botao-hora">14:30</div>
-                <div class="botao-hora">15:00</div>
-                <div class="botao-hora">15:30</div>
+                <div class="botao-hora ocupado">14:00</div>
+                <div class="botao-hora ocupado">14:30</div>
+                <div class="botao-hora ocupado">15:00</div>
+                <div class="botao-hora ocupado">15:30</div>
                 <div class="botao-hora">16:00</div>
                 <div class="botao-hora">16:30</div>
-                <div class="botao-hora">17:00</div>
-                <div class="botao-hora">17:30</div>
+                <div class="botao-hora ocupado">17:00</div>
+                <div class="botao-hora ocupado">17:30</div>
                 <div class="botao-hora">18:00</div>
                 <div class="botao-hora">18:30</div>
                 <div class="botao-hora">19:00</div>
                 <div class="botao-hora">19:30</div>
-                <div class="botao-hora">20:00</div>
-                <div class="botao-hora">20:30</div>
-                <div class="botao-hora">21:00</div>
+                <div class="botao-hora ocupado">20:00</div>
+                <div class="botao-hora ocupado">20:30</div>
+                <div class="botao-hora ocupado">21:00</div>
             </div>
         </div>
         <dialog class="add-reserva">
@@ -243,7 +243,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"
         integrity="sha384-OH5h9J1d4F2pWOSr6QdoARnIk/lZwE2deLq5pD7zB2RyFF2zDzZQdyycfp6Hs6jb"
         crossorigin="anonymous"></script>
-    <script src="agendamento.js"></script>
+    <script src="../js/reservas.js"></script>
 </body>
 
 </html>
+

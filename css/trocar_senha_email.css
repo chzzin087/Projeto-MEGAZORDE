@@ -83,12 +83,12 @@ body {
 
 input {
     height: 30px;
-    width: 8vw;
+    width: 75% !important;
     border: none;
-    padding-left: 5%;
+    padding-left: 2%;
     font-family: "Inter";
     font-size: 13px;
-    margin-left: 1.7vw;
+    margin-left: 2.2vw;
 }
 
 label {
@@ -408,12 +408,18 @@ p {
 
 /*FAIXA AZUL*/
 .rodape {
-    background-color: #003282;
-    height: 12vh;
-    z-index: 1;
-    position: absolute;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    top: 93%;
+    left: 0;
+    height: 12%;
     width: 100%;
-    margin-top: 3.5vh;
+    background-color: #003282;
+    display: flex;
+    padding-top: none;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+    z-index: 1;
 }
 
 @media screen and (max-width: 800px) {
@@ -442,6 +448,7 @@ p {
 
     .titulo {
         font-size: 16px;
+        font-weight: 450;
     }
     .instrucao {
         font-size: 14px;
@@ -549,9 +556,5 @@ p {
     .triangulo-laranja-claro:after {
         display: none;
     }
-    .rodape {
-        height: 9vh;
-        margin-top: 16%;
-        margin-bottom: 10vh;
-    }
+    
 }

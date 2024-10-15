@@ -43,15 +43,16 @@ p{
     top: 0;
     left: 0;
     height: 100%;
-    width: 20vh; /* Ajuste a largura conforme necessário */
-    background-color: #f5f5f5; /* Cor de fundo da barra lateral */
-    border-left: 30px solid orange; /* Borda laranja à direita */
+    width: 20vh; /* Ajuste conforme necessário */
+    background-color: #f5f5f5; /* Cor de fundo */
+    border-left: 30px solid orange; /* Borda laranja */
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 20px; /* Espaço no topo */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra opcional para destacar a barra lateral */
-    z-index: 1; /* Garante que a barra lateral fique atrás do conteúdo principal */
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    box-sizing: border-box;
 }
 
 .upbar {
@@ -95,19 +96,19 @@ p{
 /* Estilo dos links na barra lateral */
 .side_items a {
     display: block;
-    margin: 3.6vh; /* Espaço vertical entre os ícones */
-    color: #003282; /* Cor do ícone */
-    text-decoration: none; /* Remove o sublinhado */
-    font-size: 5vh; /* Tamanho dos ícones */
-    text-align: center; /* Alinha o texto ao centro */
-    transition: color 0.3s; /* Transição suave para a cor ao passar o mouse */
+    margin: 3.6vh;
+    color: #003282;
+    text-decoration: none;
+    font-size: 5vh;
+    text-align: center;
+    transition: color 0.3s;
 }
 
 .side_items a span {
     display: block;
-    margin-top: 8px; /* Espaço entre o ícone e o texto */
-    font-size: 14px; /* Tamanho do texto */
-    color: #003282; /* Cor do texto */
+    margin-top: 8px;
+    font-size: 14px;
+    color: #003282;
 }
 
 /* Estilo dos ícones ao passar o mouse */
@@ -123,8 +124,8 @@ p{
 .side_items hr {
     width: 100%;
     border: 0;
-    border-top: 1px solid #ddd; /* Cor e espessura da divisória */
-    margin: 20px 0; /* Espaço vertical ao redor da divisória */
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
 }
 
 .quadrado-p {
@@ -152,19 +153,21 @@ body {
     flex-direction: column;
 }
 .rede{
-    margin-top: 0.5vh;
+    margin-top: 1%;
+    margin-left: 4%;
     display: flex;
     flex-direction: row;
+    font-size: 12px;
     width: 100%;
 
 }
 .home-perfil{
-    color: #9A9A9A;
-    font-size: 14px;
+    color: #3572EF;
+    font-size: 12px;
 }
 .trocar-de-senha{
-    color: #3572EF;
-    font-size: 14px;
+    color: #9A9A9A;
+    font-size: 12px;
 }
 
 h2 {
@@ -173,6 +176,7 @@ h2 {
     margin-bottom: 20px;
     font-size: 22px;
     color: #050C9C;
+    font-weight: 450;
 }
 p{
     color: #9A9A9A;
@@ -242,15 +246,18 @@ input::placeholder{
     visibility: hidden;
 }
 .rede-barras{
-    height: 8vh;
+    height: 7vh;
 }
 
 @media screen and (max-width: 800px){
     h2{
         margin-left: 11vw;
+        font-weight: 450;
     }
     body{
         background-color: white;
+            overflow-x: hidden;
+            overflow-y: hidden;
     }
     .principal{
         width: 100%;
@@ -263,6 +270,7 @@ input::placeholder{
     .side_items{
         flex-direction: column;
         display: none;
+        z-index: 1;
     }
     .side-bar{
        display: flex;
@@ -282,7 +290,7 @@ input::placeholder{
     .img-senac{
         margin-left: 9%;
         margin-top: 3.5%;
-        width: 21vw;
+        width: 19vw;
         height: 7vh;
     }
     .rede{
@@ -304,13 +312,17 @@ input::placeholder{
     .barras{
         margin-top: 3vh;
         margin-left: 3vw;
-        height: 35px;
-        width: 35px;
+        height: 30px;
+        width: 30px;
         visibility: visible;
     }
-    .titulo-chave, .container, p{
+    .titulo-chave, .container{
         align-self: center;
-        margin-left: 2%;
+        margin-left: 6%;
+    }
+    .minimo-8caract{
+        margin-left: 14%;
+
     }
     .container{
         width: 80%;

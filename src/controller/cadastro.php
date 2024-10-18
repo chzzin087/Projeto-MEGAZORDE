@@ -20,6 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Preparar a query de inserção
                 $sql = "INSERT INTO recepcionista (id, crm, nome, email, telefone, cpf) VALUES (null, ?, ?, ?, ?, ?)";
                 $stmt = $dbh->prepare($sql);
+                //Comentrário teste
 
                 // Executar a query
                 if ($stmt->execute([$email, $nome, $telefone, $senha, $crm, $cpf])) {

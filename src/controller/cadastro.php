@@ -1,45 +1,33 @@
 <?php
-require_once("../controle/dbConnect.php");
+require_once("../config/dbConnect.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Receber os dados do formulário
     $email = filter_input(INPUT_POST, 'email');
     $nome = filter_input(INPUT_POST, 'nome');
-    $telefone = filter_input(INPUT_POST, 'telefone');
+    $data_nasc = filter_input(INPUT_POST, 'data_nasc');
     $senha = filter_input(INPUT_POST, 'senha');
-    $crm = filter_input(INPUT_POST, 'crm');
-    $especializacao = filter_input(INPUT_POST, 'especializacao');
-    $confirmarsenha = filter_input(INPUT_POST, 'confirmar-senha');
     $cpf = filter_input(INPUT_POST, 'cpf');
     // Verificar se todos os campos foram preenchidos
 
+    if (!empty($email) && !empty($nome) && !empty($senha) && !empty($cpf) && !empty($data_nasc)) {
+        try {
+            // Preparar a query de inserção
+            $insert = "INSERT INTO recepcionista (id, crm, nome, email, telefone, cpf) VALUES (null, ?, ?, ?, ?, ?)";
+            $stmt = $dbh->prepare($insert);
 
-    if ($senha == $confirmarsenha) {
-        if (!empty($email) && !empty($nome) && !empty($telefone) && !empty($senha) && !empty($cpf) && !empty($confirmarsenha) && !empty($crm) && !empty($especializacao)) {
-            try {
-                // Preparar a query de inserção
-                $sql = "INSERT INTO recepcionista (id, crm, nome, email, telefone, cpf) VALUES (null, ?, ?, ?, ?, ?)";
-                $stmt = $dbh->prepare($sql);
-                //Comentrário teste
-                //outro comentário teste
-
-                // Executar a query
-                if ($stmt->execute([$email, $nome, $telefone, $senha, $crm, $cpf])) {
-                    echo "Cadastro realizado com sucesso!";
-                    header('Location: ../views/RegistroMed.php?sucesso=1');
-                } else {
-                    echo "Erro ao cadastrar.";
-                }
-            } catch (PDOException $e) {
-                echo "Erro no banco de dados: " . $e->getMessage();
+            // Executar a query
+            if ($stmt->execute([$cpf, $senha, $nome, $data_nasc])) {
+                header('Location: ../views/cadastro.php?sucesso=1');
+               } else {
+                header('Location: ../views/cadastro.php?sucesso=0');
             }
-        } else {
-            echo "Todos os campos são obrigatórios!";
+        } catch (PDOException $e) {
+            echo "Erro no banco de dados: " . $e->getMessage();
         }
     } else {
-        echo "As senhas não são iguais";
-        header('Location: ../views/RegistroMed.php?sucesso=0');
+        header('Location: ../views/cadastro.php?sucesso=2');
     }
 } else {
-    header("Location: ../views/RegistroMed.php");
+    header("Location: ../views/cadastro.php");
 }

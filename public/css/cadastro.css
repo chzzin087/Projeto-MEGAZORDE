@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Days+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 * {
@@ -83,13 +84,28 @@ input:focus {
 
 }
 
-.img-input {
-	position: absolute;
-	width: 22px;
-	height: 22px;
-	background-color: #3572EF;
-	margin-left: 0.6vw;
-	margin-top: 3.6vh;
+.icon-user, .icon-cpf, .icon-date, .icon-email, .icon-lock {
+	display: flex;
+    justify-content: center;
+	color: #fff;
+	font-size: 25px;
+}
+
+.icon-user {
+    margin: 22% auto;
+}
+
+.icon-cpf {
+    margin: 25% auto;
+}
+.icon-date {
+    margin: 22% auto;
+}
+.icon-email{
+	margin: 25% auto;
+}
+.icon-lock{
+	margin: 22% auto;
 }
 
 button {

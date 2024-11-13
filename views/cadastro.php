@@ -72,13 +72,6 @@
                     </div>
                     <input type="email" class="email" id="email" name="email" placeholder="Ex.: senac321@petrolina.pe.senac.br" value="<?php echo isset($_POST['email']) ? htmlspecialchars($_POST['email'], ENT_QUOTES, 'UTF-8') : ''; ?>" required>
                 </div>
-                <div class="form-input">
-                    <label for="senha">Senha</label>
-                    <div class="circulo">
-                        <i class="fa-solid fa-lock icon-lock"></i>
-                    </div>
-                    <input type="password" class="senha" id="senha" name="senha" placeholder="Ex.: senac123" required>
-                </div>
                 
                 <!-- Alterando o botão para ser do tipo submit dentro do <form> -->
                 <button class="botao-cadastro" type="submit">CRIAR CONTA</button>

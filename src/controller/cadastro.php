@@ -8,8 +8,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
     $data_nasc = trim($_POST['data_nasc']);
     var_dump($data_nasc_valid);
-    $senha = filter_input(INPUT_POST, 'senha');
-    
 
     $cpf = preg_replace('/\D/', '', $_POST['cpf']); // Remove não dígitos
     if (strlen($cpf) !== 11) {
@@ -18,16 +16,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Verificar se todos os campos foram preenchidos
-    if ($email && $nome && $senha && $cpf && $data_nasc) {
+    if ($email && $nome && $cpf && $data_nasc) {
         
         $verifCadastro = "SELECT cpf FROM usuario WHERE cpf = :cpf";
         $req = $dbh->prepare($verifCadastro);
         $req->bindValue(':cpf', $cpf);
+        $req->execute();
         if (!$req->fetch(PDO::FETCH_ASSOC)) {
 
             try {
                 // Hash da senha
-                
+                $senha = "Senac123";
                 $senhaHash = password_hash($senha, PASSWORD_BCRYPT);
 
                 $status = "1";
@@ -49,8 +48,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 }
             } catch (PDOException $e) {
                 error_log("Erro no banco de dados: " . $e->getMessage()); // Logar erro
-                var_dump($e);
-                exit;
                 header('Location: ../../views/cadastro.php?error=db_error');
                 
             }

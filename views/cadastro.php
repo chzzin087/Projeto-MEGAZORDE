@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (isset($_SESSION['error'])) {
+    $error = $_SESSION['error'];
+    unset($_SESSION['error']); // Limpa o erro após exibir
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -15,31 +24,29 @@
     <main class="container">
         <h1 class="titulo">CADASTRO</h1>
         
-        <?php if (isset($_GET['error'])): ?>
-            <div class="error-message">
-                <?php
-                switch ($_GET['error']) {
-                    case 'invalid_cpf':
-                        echo "CPF inválido. Por favor, insira um CPF válido.";
-                        break;
-                    case 'empty':
-                        echo "Todos os campos devem ser preenchidos.";
-                        break;
-                    case 'user_exists':
-                        echo "Usuário já cadastrado.";
-                        break;
-                    case 'insert_failed':
-                        echo "Falha ao inserir o usuário. Tente novamente.";
-                        break;
-                    case 'db_error':
-                        echo "Erro no banco de dados. Tente novamente mais tarde.";
-                        break;
-                    default:
-                        echo "";
-                }
-                ?>
-            </div>
-        <?php endif; ?>
+        <?php if (isset($error)): ?>
+        <p class="error">
+            <?php
+            switch ($error) {
+                case 'invalid_cpf':
+                    echo "CPF inválido.";
+                    break;
+                case 'insert_failed':
+                    echo "Erro ao inserir os dados.";
+                    break;
+                case 'db_error':
+                    echo "Erro no banco de dados.";
+                    break;
+                case 'user_exists':
+                    echo "Usuário já cadastrado.";
+                    break;
+                case 'empty':
+                    echo "Por favor, preencha todos os campos.";
+                    break;
+            }
+            ?>
+        </p>
+    <?php endif; ?>
 
         <!-- Adicionando a tag <form> com método POST -->
         <form action="../src/controller/cadastro.php" method="POST">

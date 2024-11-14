@@ -49,7 +49,7 @@ if (isset($_SESSION['error'])) {
     <?php endif; ?>
 
         <!-- Adicionando a tag <form> com método POST -->
-        <form action="../src/controller/cadastro.php" method="POST">
+        <form action="../src/controller/auth_cadastro.php" method="POST">
             <div class="form">
                 <div class="form-input">
                     <label for="nome">Nome</label>

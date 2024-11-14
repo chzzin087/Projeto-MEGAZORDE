@@ -84,8 +84,7 @@ if (isset($_SESSION['error'])) {
                 <button class="botao-cadastro" type="submit">CRIAR CONTA</button>
             </div>
         </form>
-
-        <p class="text">Já possui conta? <a href="Login.php">Log-in</a></p>    
+ 
     </main>
     <div class="triangulo-principal"></div>
     <div class="senac">

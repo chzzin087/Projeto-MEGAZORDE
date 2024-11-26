@@ -31,7 +31,7 @@
                 <div class="circulo2">
                     <i class="fa-solid fa-lock" style="color: #ffffff;"></i>
                 </div>
-                <input type="password" id="senha" placeholder="Ex.: senac123">
+                <input type="password" id="senha" name="senha" placeholder="Ex.: senac123">
             </div>
             <div>
                 <label class="labell">

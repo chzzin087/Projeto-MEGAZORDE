@@ -57,6 +57,21 @@ body {
     box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
     z-index: 1; /* Garante que a barra lateral fique atrás do conteúdo principal */
 }
+
+.div_nome_user{
+    position: absolute;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.nome_exibir{
+    color: red;
+    z-index: 9999;
+}
+
 .quadrado {
     height: 25vh;
     width: 80vw;

@@ -20,7 +20,7 @@ body {
 	line-height: 40px;
 	color: #3572EF;
 	text-align: center;
-	padding: 4%;
+	padding: 8%;
 }
 
 .container {
@@ -37,7 +37,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	gap: 13px;
+	gap: 16px;
 }
 
 label {
@@ -75,7 +75,7 @@ input:focus {
 	height: 43px;
 	border-radius: 50%;
 	background-color: #3572EF;
-	margin-top: 2.6vh;
+	margin-top: 2.5vh;
 }
 
 ::-webkit-input-placeholder {
@@ -112,7 +112,7 @@ button {
 	font-weight: bold;
 	font-size: medium;
 	color: white;
-	margin: 7px;
+	margin: 25px;
 	background-color: #050C9C;
 	border-style: none;
 	width: 18vw;
@@ -123,19 +123,6 @@ button {
 
 button:hover {
 	background-color: #04096d;
-}
-
-.text,
-.text a {
-	margin-top: -1vh;
-	font-family: 'Inter';
-	color: black;
-	text-align: center;
-	font-size: 14px;
-}
-
-.text a {
-	font-weight: bold;
 }
 
 /*Bola*/

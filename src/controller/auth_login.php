@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Receber os dados do formulário
     $cpf = preg_replace('/\D/', '', $_POST['cpf']); // Remove não dígitos
     $senha = $_POST['senha'];
-
+    
     // Validar se CPF e senha foram fornecidos
     if ($cpf && $senha) {
 
@@ -25,14 +25,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['id_tipo'] = $usuario['id_tipo'];
                 $_SESSION['logged_in'] = true;
 
-                // Redirecionar conforme o tipo de usuário ou página de destino
-                if ($_SESSION['id_tipo'] == 1) {
-                    header('Location: ../../views/admin_dashboard.php');
-                    exit();
-                } else {
-                    header('Location: ../../views/user_dashboard.php');
-                    exit();
-                }
+                header('Location: ../../views/inicio.php');
+                exit();
+                // Redirecionar conforme o tipo de usuário ou página de destino (implementacao futura)
+//                if ($_SESSION['id_tipo'] == 1) {
+//                    header('Location: ../../views/admin_dashboard.php');
+//                    exit();
+//                } else {
+//                    header('Location: ../../views/user_dashboard.php');
+//                    exit();
+//                }
             } else {
                 // Se a senha for inválida
                 $_SESSION['error'] = 'senha_incorreta';

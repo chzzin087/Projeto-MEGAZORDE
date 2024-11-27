@@ -83,13 +83,28 @@ input:focus {
 
 }
 
-.img-input {
-	position: absolute;
-	width: 22px;
-	height: 22px;
-	background-color: #3572EF;
-	margin-left: 0.6vw;
-	margin-top: 3.6vh;
+.icon-user, .icon-cpf, .icon-date, .icon-email, .icon-lock {
+	display: flex;
+    justify-content: center;
+	color: #fff;
+	font-size: 25px;
+}
+
+.icon-user {
+    margin: 22% auto;
+}
+
+.icon-cpf {
+    margin: 25% auto;
+}
+.icon-date {
+    margin: 22% auto;
+}
+.icon-email{
+	margin: 25% auto;
+}
+.icon-lock{
+	margin: 22% auto;
 }
 
 button {

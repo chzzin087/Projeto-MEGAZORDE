@@ -48,13 +48,10 @@
                     }
                 }
                 ?>
-                <label class="labell">
-                    <input type="checkbox" id="rememberMe">Lembre-se de mim
-                </label>
+                
             </div>
             <button class="entrar" type="submit">ENTRAR</button>
             <a class="esq-senha" href="redefinir_senha.html">Esqueceu a senha?</a>
-            <a class="cadastrar" href="cadastro.php">Cadastrar-se</a>
             <div class="menu">
                 <hr>
                 <p>ou</p>

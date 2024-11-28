@@ -37,7 +37,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    margin: 20% auto 0;
+    margin: 16% auto 0;
     width: 90%;
 }
 
@@ -112,6 +112,14 @@ input:focus {
     gap: 4%;
     font-family: "Inter";
     font-size: 14px;
+    margin-top: 3%;
+}
+
+.error {
+    font-size: 14px;
+    color: #f73e3e;
+    margin: -1vh 0 0 1%;
+    position: absolute;
 }
 
 
@@ -123,27 +131,29 @@ input:focus {
     font-weight: bold;
     color: white;
     background-color: #050C9C;
-    margin-top: 5%;
+    margin-top: -1vh;
+    cursor: pointer;
 }
 
 .entrar:hover {
     background-color: #04096d;
 }
 
-.esq-senha {
+.esq-senha, .cadastrar {
     color: black;
     font-family: "Inter";
     display: flex;
     justify-content: center;
-    margin-top: 4%;
+    margin-top: 0%;
+    font-size: 15px;
 }
 
 .menu {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 8px;
     flex-direction: row;
-    margin-top: 3%;
+    margin-top: 2%;
 }
 
 hr {
@@ -167,7 +177,10 @@ p {
     font-weight: bold;
     color: white;
     background-color: #E68E19;
-    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 .horarios:hover {
@@ -397,6 +410,7 @@ p {
 
     .campos {
         gap: 15px;
+        margin: 14% auto 0;
     }
 
     label {

@@ -347,7 +347,7 @@ main {
 
 .edit-icon-perfil i {
     font-size: 25px;
-    margin-left: 5px;
+    margin-left: 7px;
     margin-top: 0.4vw;
     position: absolute;
     color: #050C9C;
@@ -358,9 +358,13 @@ main {
     text-align: center;
 }
 .user-details h1{
+    margin-bottom: 0;
+    font-size: 20px;
     font-weight: 300;
 }
 .user-details h3{
+    margin-top: 0;
+    font-size: 16px;
     font-weight:300;
     color: #9A9A9A;
 }

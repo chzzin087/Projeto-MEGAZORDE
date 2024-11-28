@@ -14,46 +14,68 @@
     <div class="triangulo-azul"></div>
     <main class="container">
         <h1 class="titulo">CADASTRO</h1>
-        <div class="form">
-            <div class="form-input">
-                <label for="nome">Nome</label>
-                <div class="circulo">
-                    <i class="fa-solid fa-user icon-user"></i>
-                </div>
-                <input type="text" class="nome" id="nome" placeholder="Ex.: Rômulo Ferreira Santos">
+        
+        <?php if (isset($_GET['error'])): ?>
+            <div class="error-message">
+                <?php
+                switch ($_GET['error']) {
+                    case 'invalid_cpf':
+                        echo "CPF inválido. Por favor, insira um CPF válido.";
+                        break;
+                    case 'empty':
+                        echo "Todos os campos devem ser preenchidos.";
+                        break;
+                    case 'user_exists':
+                        echo "Usuário já cadastrado.";
+                        break;
+                    case 'insert_failed':
+                        echo "Falha ao inserir o usuário. Tente novamente.";
+                        break;
+                    case 'db_error':
+                        echo "Erro no banco de dados. Tente novamente mais tarde.";
+                        break;
+                    default:
+                        echo "";
+                }
+                ?>
             </div>
-            <div class="form-input">
-                <label for="cpf">CPF</label>
-                <div class="circulo">
-                    <i class="fa-regular fa-address-card icon-cpf"></i>
+        <?php endif; ?>
+
+        <!-- Adicionando a tag <form> com método POST -->
+        <form action="../src/controller/controller_cadastro.php" method="POST">
+            <div class="form">
+                <div class="form-input">
+                    <label for="nome">Nome</label>
+                    <div class="circulo">
+                        <i class="fa-solid fa-user icon-user"></i>
+                    </div>
+                    <input type="text" class="nome" id="nome" name="nome" placeholder="Ex.: Rômulo Ferreira Santos" value="<?php echo isset($_POST['nome']) ? htmlspecialchars($_POST['nome'], ENT_QUOTES, 'UTF-8') : ''; ?>" required>
                 </div>
-                <input type="text" class="cpf" id="cpf" pattern="\d{3}(\.?\d{3}){2}-?\d{2}|^\d{11}$"
-                    placeholder="Ex.: 000.000.000-00">
-            </div>
-            <div class="form-input">
-                <label for="data-nasc">Data de nascimento</label>
-                <div class="circulo">
-                    <i class="fa-solid fa-calendar-days icon-date"></i>
+                <div class="form-input">
+                    <label for="cpf">CPF</label>
+                    <div class="circulo">
+                        <i class="fa-regular fa-address-card icon-cpf"></i>
+                    </div>
+                    <input type="text" class="cpf" id="cpf" name="cpf" pattern="\d{3}(\.?\d{3}){2}-?\d{2}|^\d{11}$" placeholder="Ex.: 000.000.000-00" value="<?php echo isset($_POST['cpf']) ? htmlspecialchars($_POST['cpf'], ENT_QUOTES, 'UTF-8') : ''; ?>" required>
                 </div>
-                <input type="text" class="data-nasc" id="data" placeholder="Ex.: 01/01/1999">
-            </div>
-            <div class="form-input">
-                <label for="email">E-mail</label>
-                <div class="circulo">
-                    <i class="fa-solid fa-envelope icon-email"></i>
+                <div class="form-input">
+                    <label for="data-nasc">Data de nascimento</label>
+                    <div class="circulo">
+                        <i class="fa-solid fa-calendar-days icon-date"></i>
+                    </div>
+                    <input type="date" class="data-nasc" id="data_nasc" name="data_nasc" placeholder="Ex.: 01/01/1999" value="<?php echo isset($_POST['data_nasc']) ? htmlspecialchars($_POST['data_nasc'], ENT_QUOTES, 'UTF-8') : ''; ?>" required>
                 </div>
-                <input type="email" class="email" id="email" placeholder="Ex.: senac321@petrolina.pe.senac.br">
-            </div>
-            <div class="form-input">
-                <label for="senha">Senha</label>
-                <div class="circulo">
-                    <i class="fa-solid fa-lock icon-lock"></i>
+                <div class="form-input">
+                    <label for="email">E-mail</label>
+                    <div class="circulo">
+                        <i class="fa-solid fa-envelope icon-email"></i>
+                    </div>
+                    <input type="email" class="email" id="email" name="email" placeholder="Ex.: senac321@petrolina.pe.senac.br" value="<?php echo isset($_POST['email']) ? htmlspecialchars($_POST['email'], ENT_QUOTES, 'UTF-8') : ''; ?>" required>
                 </div>
-                <input type="password" class="senha" id="senha" placeholder="Ex.: senac123">
+                
+                <button class="botao-cadastro" type="submit">CRIAR CONTA</button>
             </div>
-            <button class="botao-cadastro">CRIAR CONTA</button>
-            <p class="text">Já possui conta? <a href="Login.php">Log-in</a></p>    
-        </div>
+        </form>
     </main>
     <div class="triangulo-principal"></div>
     <div class="senac">
@@ -61,7 +83,7 @@
     </div>
     <div class="texto-triangulo">
         <h2>Sistema de Gerenciamento</h2>
-        <h1>Laboratório Maker</h3>
+        <h1>Laboratório Maker</h1>
     </div>
     <div class="triangulo-laranja"></div>
     <div class="triangulo-laranja-claro"></div>

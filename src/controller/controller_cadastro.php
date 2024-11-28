@@ -7,7 +7,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = htmlspecialchars(trim($_POST['nome']), ENT_QUOTES, 'UTF-8');
         
     $data_nasc = trim($_POST['data_nasc']);
-    var_dump($data_nasc_valid);
 
     $cpf = preg_replace('/\D/', '', $_POST['cpf']); // Remove não dígitos
     if (strlen($cpf) !== 11) {

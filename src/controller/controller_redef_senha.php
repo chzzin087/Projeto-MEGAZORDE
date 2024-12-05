@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Executa a atualização
                 if ($stmt->execute()) {
                     // Enviar e-mail avisando que a senha foi alterada para a senha padrão
-                    $assunto = "Alteração de Senha - Sistema";
+                    $assunto = "Alteração de Senha - Sistema de Gerenciamento LabMaker Senac";
                     $mensagem = "Olá,\n\nSua senha foi alterada para a senha padrão.\n\n"
                               . "Agora você pode fazer o login com a senha: Senac123\n\n"
                               . "Após o login, você poderá alterar sua senha através do sistema.\n\n"
@@ -37,12 +37,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $headers .= "Reply-To: suporte@sistema.com.br\r\n";
                     $headers .= "X-Mailer: PHP/" . phpversion();
 
-                    // Enviar o e-mail
-                    if (mail($email, $assunto, $mensagem, $headers)) {
+                    // Detectar o sistema operacional
+                    if (stristr(PHP_OS, 'WIN')) {
+                        // Configuração para Windows
+                        $mail_sent = mail($email, $assunto, $mensagem, $headers);
+                    } else {
+                        // Configuração para Linux
+                        ini_set('sendmail_path', '/usr/sbin/sendmail -t -i');
+                        $mail_sent = mail($email, $assunto, $mensagem, $headers);
+                    }
+
+                    // Verificar se o e-mail foi enviado com sucesso
+                    if ($mail_sent) {
                         header('Location: ../../views/redefinir_senha.php?success=true');
                         exit;
                     } else {
                         // Caso falhe o envio do e-mail
+                        error_log("Falha ao enviar e-mail para $email");
                         header('Location: ../../views/redefinir_senha.php?error=email_fail');
                         exit;
                     }
